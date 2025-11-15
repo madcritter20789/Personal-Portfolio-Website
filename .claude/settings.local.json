@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"C:\\Users\\Chitransh\\OneDrive\\Documents\\GitHub\\Personal-Portfolio-Website\\Unity Games\")",
+      "Bash(dir \"C:\\Users\\Chitransh\\OneDrive\\Documents\\GitHub\\Personal-Portfolio-Website\\Blender\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

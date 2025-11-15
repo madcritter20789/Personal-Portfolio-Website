@@ -9,7 +9,7 @@
 <body class="non-home-page">
     <header>
         <a href="#home" class="logo">Chitransh</a>
-        <nav>
+        <nav id="navbar">
             <a href="#home">Home</a>
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
@@ -17,6 +17,11 @@
             <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
         </nav>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 <!-- Home Section -->
 <section id="home" class="home">
@@ -72,6 +77,16 @@
                 <ul class="experience-details">
                     <li>Partnered with professors to design educational games.</li>
                     <li>Collaborated with professors to design games aimed at enhancing memory and logical skills.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Unity Developer</h3>
+                <p class="company-name">Neela Media Tech <span>| Current</span></p>
+                <ul class="experience-details">
+                    <li>Developing engaging games and interactive experiences using Unity engine.</li>
+                    <li>Collaborating with cross-functional teams on game design and implementation.</li>
+                    <li>Optimizing performance and delivering high-quality game solutions.</li>
                 </ul>
             </div>
         </div>
@@ -599,6 +614,14 @@
                 </li>
             </ul>
         </div>
+        <div class="skill-item">
+            <h3>Sketchbook</h3>
+            <ul>
+                <li>
+                <span class="bar"><span class="Sketchbook"></span></span>
+                </li>
+            </ul>
+        </div>
     </div>
     </section>
 <!-- Contact Section -->
@@ -646,5 +669,34 @@
     <footer>
         <p>© 2024 Chitransh. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navbar = document.getElementById('navbar');
+
+        // Toggle menu on hamburger click
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navbar.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        const navLinks = navbar.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navbar.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('header')) {
+                hamburger.classList.remove('active');
+                navbar.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
