@@ -12,6 +12,7 @@
         <nav id="navbar">
             <a href="#home">Home</a>
             <a href="#projects">Projects</a>
+            <a href="#mechanic-ai">Mechanic AI</a>
             <a href="#skills">Skills</a>
             <a href="#education">Education</a>
             <a href="#experience">Experience</a>
@@ -558,6 +559,56 @@
             </div>
         </div>
     </section>
+
+<!-- Mechanic AI Section -->
+<section id="mechanic-ai" class="mechanic-ai">
+    <br><br>
+    <h1>Mechanic AI</h1>
+    <p>Unity game mechanics and AI systems in action</p>
+
+    <div class="mechanic-timeline">
+
+        <!-- Item 1: text left, video right -->
+        <div class="mechanic-item">
+            <div class="mechanic-content left">
+                <h3>Frame Recorder</h3>
+                <p class="mechanic-subtitle">Unity Tool &nbsp;|&nbsp; Gameplay Capture</p>
+                <p class="mechanic-desc">A frame-based replay system in Unity that records and restores game state per-frame using a modular architecture where individual components (transforms, physics, animations) implement a shared Recorder interface. Frame states are stored in dictionaries keyed by frame number, enabling efficient lookup, smooth scrubbing, and flexible timeline changes. A central PlaybackController manages recording and playback modes while physics is disabled during playback for accurate state restoration — powering rewinding, killcams, instant replays, and debugging tools without altering the core system.</p>
+            </div>
+            <div class="mechanic-dot"><i class="fa-solid fa-video"></i></div>
+            <div class="mechanic-video right">
+                <video controls muted loop src="Unity Games/Mechanic/Frame _Recorder.mp4"></video>
+            </div>
+        </div>
+
+        <!-- Item 2: video left, text right -->
+        <div class="mechanic-item">
+            <div class="mechanic-video left">
+                <video controls muted loop src="Unity Games/Mechanic/Procedural_Genration.mp4"></video>
+            </div>
+            <div class="mechanic-dot"><i class="fa-solid fa-cube"></i></div>
+            <div class="mechanic-content right">
+                <h3>Procedural Generation</h3>
+                <p class="mechanic-subtitle">Unity Algorithm &nbsp;|&nbsp; Level Design</p>
+                <p class="mechanic-desc">Procedural terrain generation using layered Perlin noise to create realistic landscapes from a height map, where multiple noise octaves add large-scale shapes and fine surface detail. Height data is shaped with fall-off maps to form islands or bounded terrain, then converted into a 3D mesh with vertices, triangles, and UVs. Visual variety comes through height-based biome coloring (water, grass, snow) rendered efficiently via vertex colors — producing vast, varied worlds with minimal manual design.</p>
+            </div>
+        </div>
+
+        <!-- Item 3: text left, video right -->
+        <div class="mechanic-item">
+            <div class="mechanic-content left">
+                <h3>Motion Matching</h3>
+                <p class="mechanic-subtitle">Unity Animation &nbsp;|&nbsp; Character AI</p>
+                <p class="mechanic-desc">A data-driven approach where every frame of animation is treated as a searchable pose in a database. Instead of manually defining transitions, the system continuously selects the best-fitting pose by comparing the character's current state and predicted trajectory against precomputed animation data via a cost function. Key features like foot positions, velocities, and future trajectory guide selection, while thresholds, clip-change penalties, and limited search frequency ensure stability. Built on Unity's Playables API — making new animations as simple as baking them into the database for scalable, responsive, natural character movement.</p>
+            </div>
+            <div class="mechanic-dot"><i class="fa-solid fa-person-running"></i></div>
+            <div class="mechanic-video right">
+                <video controls muted loop src="Unity Games/Mechanic/Motion_Matching.mp4"></video>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 <!-- Skills Section -->
 <section id="skills" class="skills">

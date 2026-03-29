@@ -2,9 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(dir \"C:\\Users\\Chitransh\\OneDrive\\Documents\\GitHub\\Personal-Portfolio-Website\\Unity Games\")",
-      "Bash(dir \"C:\\Users\\Chitransh\\OneDrive\\Documents\\GitHub\\Personal-Portfolio-Website\\Blender\")"
+      "Bash(dir \"C:\\Users\\Chitransh\\OneDrive\\Documents\\GitHub\\Personal-Portfolio-Website\\Blender\")",
+      "Bash(claude mcp:*)"
     ],
     "deny": [],
     "ask": []
+  },
+  "enabledPlugins": {
+    "ui-ux-pro-max@ui-ux-pro-max-skill": true
   }
 }
