@@ -1154,35 +1154,13 @@ span {
     transition: width 3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.Unity {
-    width: 80%;
-    animation: Unity 3s forwards;
-}
-
-.Python {
-    width: 70%;
-    animation: Python 3s forwards;
-}
-
-.Language {
-    width: 90%;
-    animation: Language 3s forwards;
-}
-
-.Adobe {
-    width: 60%;
-    animation: Adobe 3s forwards;
-}
-
-.Blender {
-    width: 60%;
-    animation: Blender 3s forwards;
-}
-
-.Sketchbook {
-    width: 25%;
-    animation: Sketchbook 3s forwards;
-}
+/* Skill bar widths — animated via Motion when section scrolls into view */
+.Unity     { width: 0%; }
+.Python    { width: 0%; }
+.Language  { width: 0%; }
+.Adobe     { width: 0%; }
+.Blender   { width: 0%; }
+.Sketchbook{ width: 0%; }
 
 @keyframes Unity {
     from {
@@ -1568,6 +1546,121 @@ footer p {
     .mechanic-content.left { order: 1; }
     .mechanic-video.right  { order: 2; }
     .mechanic-content.right { order: 1; }
+}
+
+/* ===================== Motion & Visual Enhancements ===================== */
+
+/* Scroll progress bar */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    z-index: 9999;
+    box-shadow: 0 0 12px rgba(250, 124, 65, 0.7);
+    border-radius: 0 2px 2px 0;
+    pointer-events: none;
+}
+
+/* Ambient background blobs */
+.bg-blob {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(90px);
+}
+.bg-blob-1 {
+    width: 560px;
+    height: 560px;
+    background: radial-gradient(circle, rgba(183, 75, 75, 0.12) 0%, transparent 70%);
+    top: -150px;
+    right: -150px;
+    animation: blobDrift 12s ease-in-out infinite alternate;
+}
+.bg-blob-2 {
+    width: 440px;
+    height: 440px;
+    background: radial-gradient(circle, rgba(250, 124, 65, 0.08) 0%, transparent 70%);
+    bottom: 20%;
+    left: -120px;
+    animation: blobDrift 16s ease-in-out infinite alternate-reverse;
+}
+@keyframes blobDrift {
+    from { transform: translate(0, 0) scale(1); }
+    to   { transform: translate(30px, 40px) scale(1.09); }
+}
+
+/* Subtle section separator */
+section + section {
+    border-top: 1px solid rgba(183, 75, 75, 0.07);
+}
+
+/* Section label pill */
+.section-tag {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    background: rgba(250, 124, 65, 0.1);
+    border: 1px solid rgba(250, 124, 65, 0.28);
+    border-radius: 50px;
+    padding: 0.3rem 1.4rem;
+    margin-bottom: 1rem;
+    backdrop-filter: blur(4px);
+    -webkit-text-fill-color: var(--secondary-color); /* override gradient span rule */
+    background-clip: initial;
+    -webkit-background-clip: initial;
+}
+
+/* Richer glow on card hover */
+.experience-item:hover,
+.projects-item:hover,
+.education-item:hover,
+.skill-item:hover {
+    box-shadow: var(--shadow-lg), 0 0 28px rgba(183, 75, 75, 0.16);
+}
+
+/* Gradient underline on mechanic-ai h1 (matches other sections) */
+.mechanic-ai h1 {
+    position: relative;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+.mechanic-ai h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+}
+
+/* Project github link colour */
+.projects-name a {
+    color: var(--secondary-color);
+    -webkit-text-fill-color: var(--secondary-color);
+    transition: color 0.2s ease;
+}
+.projects-name a:hover {
+    color: var(--primary-color);
+    -webkit-text-fill-color: var(--primary-color);
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 /* Performance Optimizations */

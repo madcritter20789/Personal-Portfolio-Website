@@ -24,6 +24,11 @@
             <span></span>
         </div>
     </header>
+<!-- Scroll progress bar -->
+<div id="scroll-progress"></div>
+<!-- Ambient background blobs -->
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
 <!-- Home Section -->
 <section id="home" class="home">
         <div class="home-img">
@@ -48,6 +53,7 @@
 <section id="experience" class="experience">
 <br>
 <br>
+        <div style="text-align:center"><span class="section-tag">Career</span></div>
         <h1>Experience</h1>
         <p>Here is a summary of my professional experience:</p>
         
@@ -124,6 +130,7 @@
 <section id="projects" class="projects">
 <br>
 <br>
+        <div style="text-align:center"><span class="section-tag">Selected Work</span></div>
         <h1>Projects</h1>
         <p>Here is a summary of my projects:</p>
         <div class="projects-container">
@@ -563,6 +570,7 @@
 <!-- Mechanic AI Section -->
 <section id="mechanic-ai" class="mechanic-ai">
     <br><br>
+    <span class="section-tag">Unity Experiments</span>
     <h1>Mechanic AI</h1>
     <p>Unity game mechanics and AI systems in action</p>
 
@@ -614,6 +622,7 @@
 <section id="skills" class="skills">
 <br>
 <br>
+        <div><span class="section-tag">Technical Stack</span></div>
         <h1>Skills</h1>
         <p>Here are some of the skills I possess:</p>
         <br>
@@ -730,6 +739,200 @@
     <footer>
         <p>© 2024 Chitransh. All rights reserved.</p>
     </footer>
+
+    <!-- Motion (Framer Motion for vanilla JS) animations -->
+    <script type="module">
+    import { animate, inView } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
+
+    // Custom ease-out curve (snappy, natural)
+    const ease = [0.22, 1, 0.36, 1];
+
+    // Clear Motion's inline transform after animation so CSS hover still works
+    const cleanupTransform = (el) => {
+        el.style.transform  = '';
+        el.style.translate  = '';
+        el.style.scale      = '';
+    };
+
+    /* ── Hero (fires immediately on load) ─────────────────────── */
+    animate('.home-img',
+        { opacity: [0, 1], scale: [0.88, 1] },
+        { duration: 0.7, ease });
+
+    animate('.home-content h1',
+        { opacity: [0, 1], y: [44, 0] },
+        { duration: 0.7, delay: 0.15, ease });
+
+    animate('.home-content h3',
+        { opacity: [0, 1], y: [30, 0] },
+        { duration: 0.6, delay: 0.3, ease });
+
+    animate('.home-content > p',
+        { opacity: [0, 1], y: [20, 0] },
+        { duration: 0.6, delay: 0.45, ease });
+
+    animate('.home-content .social-icons',
+        { opacity: [0, 1], y: [16, 0] },
+        { duration: 0.5, delay: 0.62, ease });
+
+    document.querySelectorAll('.home-content .btn').forEach((btn, i) => {
+        animate(btn,
+            { opacity: [0, 1], y: [16, 0] },
+            { duration: 0.5, delay: 0.74 + i * 0.12, ease }
+        ).then(() => cleanupTransform(btn));
+    });
+
+    /* ── Section headings (scroll-triggered) ──────────────────── */
+    document.querySelectorAll('section h1, .mechanic-ai h1').forEach(h1 => {
+        const stop = inView(h1, ({ target }) => {
+            animate(target, { opacity: [0, 1], y: [28, 0] }, { duration: 0.55, ease });
+            stop();
+        }, { margin: '-60px 0px 0px 0px' });
+    });
+
+    /* Section tag labels */
+    document.querySelectorAll('.section-tag').forEach(tag => {
+        const stop = inView(tag, ({ target }) => {
+            animate(target, { opacity: [0, 1], y: [12, 0] }, { duration: 0.4, ease });
+            stop();
+        }, { margin: '-60px 0px 0px 0px' });
+    });
+
+    /* ── Experience cards (staggered) ─────────────────────────── */
+    document.querySelectorAll('.experience-item').forEach((el, i) => {
+        const stop = inView(el, ({ target }) => {
+            animate(target,
+                { opacity: [0, 1], y: [50, 0] },
+                { duration: 0.5, delay: i * 0.07, ease }
+            ).then(() => cleanupTransform(target));
+            stop();
+        }, { margin: '-40px 0px' });
+    });
+
+    /* ── Education cards ──────────────────────────────────────── */
+    document.querySelectorAll('.education-item').forEach((el, i) => {
+        const stop = inView(el, ({ target }) => {
+            animate(target,
+                { opacity: [0, 1], x: [-50, 0] },
+                { duration: 0.55, delay: i * 0.1, ease }
+            ).then(() => cleanupTransform(target));
+            stop();
+        }, { margin: '-40px 0px' });
+    });
+
+    /* ── Project cards (staggered in pairs) ───────────────────── */
+    document.querySelectorAll('.projects-item').forEach((el, i) => {
+        const stop = inView(el, ({ target }) => {
+            animate(target,
+                { opacity: [0, 1], y: [40, 0], scale: [0.96, 1] },
+                { duration: 0.48, delay: (i % 2) * 0.08, ease }
+            ).then(() => cleanupTransform(target));
+            stop();
+        }, { margin: '-40px 0px' });
+    });
+
+    /* ── Skill cards (alternate left/right slide) ─────────────── */
+    document.querySelectorAll('.skill-item').forEach((el, i) => {
+        const stop = inView(el, ({ target }) => {
+            animate(target,
+                { opacity: [0, 1], x: [i % 2 === 0 ? -30 : 30, 0] },
+                { duration: 0.5, delay: i * 0.05, ease }
+            ).then(() => cleanupTransform(target));
+            stop();
+        }, { margin: '-40px 0px' });
+    });
+
+    /* ── Skill bars (width animation on scroll) ───────────────── */
+    const SKILL_WIDTHS = {
+        '.Unity': '80%', '.Python': '70%', '.Language': '90%',
+        '.Adobe': '60%', '.Blender': '60%', '.Sketchbook': '25%'
+    };
+    const skillContainer = document.querySelector('.skill-container');
+    if (skillContainer) {
+        const stop = inView(skillContainer, () => {
+            Object.entries(SKILL_WIDTHS).forEach(([sel, w], i) => {
+                document.querySelectorAll(sel).forEach(bar => {
+                    animate(bar, { width: w }, { duration: 1.4, delay: 0.2 + i * 0.08, ease });
+                });
+            });
+            stop();
+        }, { margin: '-60px 0px' });
+    }
+
+    /* ── Mechanic AI timeline (alternate slide-in) ────────────── */
+    document.querySelectorAll('.mechanic-item').forEach((item, i) => {
+        const fromLeft  = i % 2 === 0;
+        const content   = item.querySelector('.mechanic-content');
+        const video     = item.querySelector('.mechanic-video');
+        const dot       = item.querySelector('.mechanic-dot');
+
+        if (dot) {
+            const s = inView(dot, ({ target }) => {
+                animate(target, { opacity: [0, 1], scale: [0, 1] }, { duration: 0.4, ease });
+                s();
+            }, { margin: '-80px 0px' });
+        }
+        if (content) {
+            const s = inView(content, ({ target }) => {
+                animate(target,
+                    { opacity: [0, 1], x: [fromLeft ? -60 : 60, 0] },
+                    { duration: 0.65, ease }
+                ).then(() => cleanupTransform(target));
+                s();
+            }, { margin: '-80px 0px' });
+        }
+        if (video) {
+            const s = inView(video, ({ target }) => {
+                animate(target,
+                    { opacity: [0, 1], x: [fromLeft ? 60 : -60, 0] },
+                    { duration: 0.65, delay: 0.1, ease }
+                ).then(() => cleanupTransform(target));
+                s();
+            }, { margin: '-80px 0px' });
+        }
+    });
+
+    /* ── Contact section ──────────────────────────────────────── */
+    const contactCont = document.querySelector('.contact-container');
+    if (contactCont) {
+        const stop = inView(contactCont, ({ target }) => {
+            animate(target, { opacity: [0, 1], x: [-40, 0] }, { duration: 0.6, ease })
+                .then(() => cleanupTransform(target));
+            stop();
+        }, { margin: '-60px 0px' });
+    }
+    const formCont = document.querySelector('.form-container');
+    if (formCont) {
+        const stop = inView(formCont, ({ target }) => {
+            animate(target, { opacity: [0, 1], x: [40, 0] }, { duration: 0.6, delay: 0.1, ease })
+                .then(() => cleanupTransform(target));
+            stop();
+        }, { margin: '-60px 0px' });
+    }
+
+    /* ── Scroll progress bar ──────────────────────────────────── */
+    const progressBar = document.getElementById('scroll-progress');
+    if (progressBar) {
+        window.addEventListener('scroll', () => {
+            const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+            progressBar.style.width = pct + '%';
+        }, { passive: true });
+    }
+
+    /* ── Active nav highlight on scroll ──────────────────────── */
+    const navLinks   = document.querySelectorAll('nav a[href^="#"]');
+    const allSections = document.querySelectorAll('section[id]');
+    const navObserver = new IntersectionObserver(entries => {
+        entries.forEach(({ target, isIntersecting }) => {
+            if (isIntersecting) {
+                navLinks.forEach(a => {
+                    a.classList.toggle('active', a.getAttribute('href') === '#' + target.id);
+                });
+            }
+        });
+    }, { threshold: 0.3 });
+    allSections.forEach(s => navObserver.observe(s));
+    </script>
 
     <script>
         // Hamburger Menu Toggle
