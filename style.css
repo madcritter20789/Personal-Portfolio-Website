@@ -1654,6 +1654,119 @@ section + section {
     -webkit-text-fill-color: var(--primary-color);
 }
 
+/* Research Papers Section */
+.research {
+    padding: 3.5rem 4%;
+    color: var(--text-primary);
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .research {
+        padding: 5rem 7%;
+    }
+}
+
+.research h1 {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .research h1 {
+        font-size: 3.5rem;
+    }
+}
+
+.research p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.research-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .research-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.research-item {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1.4rem 1.6rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.research-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg), 0 0 28px rgba(183, 75, 75, 0.16);
+    border-color: rgba(183, 75, 75, 0.5);
+}
+
+.research-item h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.4rem;
+}
+
+.research-meta {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.6rem !important;
+}
+
+.research-meta span {
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 0.95rem;
+}
+
+.research-links {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem !important;
+}
+
+.research-links a {
+    color: var(--secondary-color);
+    -webkit-text-fill-color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.research-links a:hover {
+    color: var(--primary-color);
+    -webkit-text-fill-color: var(--primary-color);
+}
+
+.research-item ul {
+    margin-top: 0.5rem;
+    padding-left: 1.2rem;
+    list-style-type: disc;
+    color: var(--primary-color);
+}
+
+.research-item ul li {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0.4rem;
+    color: var(--text-primary);
+}
+
 /* Respect reduced-motion preference */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {

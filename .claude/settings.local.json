@@ -3,7 +3,12 @@
     "allow": [
       "Bash(dir \"C:\\Users\\Chitransh\\OneDrive\\Documents\\GitHub\\Personal-Portfolio-Website\\Unity Games\")",
       "Bash(dir \"C:\\Users\\Chitransh\\OneDrive\\Documents\\GitHub\\Personal-Portfolio-Website\\Blender\")",
-      "Bash(claude mcp:*)"
+      "Bash(claude mcp:*)",
+      "Bash(for proj:*)",
+      "Bash(do echo:*)",
+      "Read(//d/Ai Projects/**)",
+      "Bash(git remote:*)",
+      "Bash(/dev/null echo:*)"
     ],
     "deny": [],
     "ask": []
