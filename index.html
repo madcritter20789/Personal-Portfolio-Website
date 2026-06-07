@@ -11,15 +11,18 @@
         <a href="#home" class="logo">Chitransh</a>
         <nav id="navbar">
             <a href="#home">Home</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
             <a href="#projects">Projects</a>
             <a href="#research">Research</a>
-            <a href="#mechanic-ai">Mechanic AI</a>
+            <a href="#tools-system">Tools and System</a>
             <a href="#Showcase">Showcase</a>
             <a href="#skills">Skills</a>
-            <a href="#education">Education</a>
-            <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
         </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+            <i class="fa-solid fa-moon"></i>
+        </button>
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
@@ -28,9 +31,6 @@
     </header>
 <!-- Scroll progress bar -->
 <div id="scroll-progress"></div>
-<!-- Ambient background blobs -->
-<div class="bg-blob bg-blob-1"></div>
-<div class="bg-blob bg-blob-2"></div>
 <!-- Home Section -->
 <section id="home" class="home">
         <div class="home-img">
@@ -47,8 +47,10 @@
                 <a href="https://www.instagram.com/chitransh4124/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://medium.com/@chitranshnishad27" target="_blank" aria-label="Medium"><i class="fa-brands fa-medium"></i></a>
             </div>
-            <a href="#contact" class="btn">Contact me</a><br> <br>
-            <a href="/Chitransh_Nishad_Resume.pdf" download class="btn">Download Resume</a><br> <br>
+            <div class="home-actions">
+                <a href="#contact" class="btn">Contact me</a>
+                <a href="/Chitransh_Nishad_Resume.pdf" download class="btn btn-alt">Download Resume</a>
+            </div>
         </div>
 </section>
 <!-- Experience Section -->
@@ -259,7 +261,6 @@
 
         </div>
     </section>
-
 <!-- Research Papers Section -->
 <section id="research" class="research">
 <br>
@@ -311,13 +312,12 @@
 
     </div>
 </section>
-
-<!-- Mechanic AI Section -->
-<section id="mechanic-ai" class="mechanic-ai">
+<!-- Tools and System Section -->
+<section id="tools-system" class="mechanic-ai">
     <br><br>
     <span class="section-tag">Unity Experiments</span>
-    <h1>Mechanic AI</h1>
-    <p>Unity game mechanics and AI systems in action</p>
+    <h1>Tools and System</h1>
+    <p>Unity tools, gameplay systems, and AI experiments in action</p>
 
     <div class="mechanic-timeline">
 
@@ -362,16 +362,15 @@
 
     </div>
 </section>
-
 <!-- Showcase Section -->
     <section id="Showcase" class="Showcase">
 <!-- Gameplay Section -->
-<h1 style="text-align: center; font-size: 50px;">Gameplay</h1>
+<h1>Gameplay</h1>
     <div class="carousel" id="test1">
 
         <input type="radio" name="item" value="1" checked>
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/ZenBlock.mp4">
+            <video controls muted loop preload="metadata" src="Unity Games/ZenBlock.mp4">
                 <source src="Unity Games/ZenBlock.mp4">
                 This browser do not suport mp4.
             </video>
@@ -379,7 +378,7 @@
 
         <input type="radio" name="item" value="2">
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/ObstacleKicks.mp4">
+            <video controls muted loop preload="metadata" src="Unity Games/ObstacleKicks.mp4">
                 <source src="Unity Games/CAR RACING GAME.mp4">
                 This browser do not suport mp4.
             </video>
@@ -387,7 +386,7 @@
 
         <input type="radio" name="item" value="3">
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/CAR RACING GAME.mp4">
+            <video controls muted loop preload="metadata" src="Unity Games/CAR RACING GAME.mp4">
                 <source src="Unity Games/CAR RACING GAME.mp4">
                 This browser do not suport mp4.
             </video> 
@@ -395,7 +394,7 @@
 
         <input type="radio" name="item" value="4">
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/ZombieHunter.mp4">
+            <video controls muted loop preload="metadata" src="Unity Games/ZombieHunter.mp4">
                 <source src="Unity Games/Zombie Hunter.mp4">
                 This browser do not suport mp4.
             </video> 
@@ -403,7 +402,7 @@
 
         <input type="radio" name="item" value="5">
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/Hunt Monster.mp4" >
+            <video controls muted loop preload="metadata" src="Unity Games/Hunt Monster.mp4" >
                 <source src="Unity Games/Hunt Monster.mp4">
                 This browser do not suport mp4.
             </video> 
@@ -411,7 +410,7 @@
 
         <input type="radio" name="item" value="6">
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/BalloonEscape.mp4" >
+            <video controls muted loop preload="metadata" src="Unity Games/BalloonEscape.mp4" >
                 <source src="Unity Games/Balloon Escape.mp4">
                 This browser do not suport mp4.
             </video> 
@@ -420,7 +419,7 @@
     
         <input type="radio" name="item" value="7">
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/2D Platformer.mp4" >
+            <video controls muted loop preload="metadata" src="Unity Games/2D Platformer.mp4" >
                 <source src="Unity Games/Hunt Monster.mp4">
                 This browser do not suport mp4.
             </video> 
@@ -428,7 +427,7 @@
 
         <input type="radio" name="item" value="8">
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/Argon Assault.mp4" >
+            <video controls muted loop preload="metadata" src="Unity Games/Argon Assault.mp4" >
                 <source src="Unity Games/Hunt Monster.mp4">
                 This browser do not suport mp4.
             </video> 
@@ -436,7 +435,7 @@
     
         <input type="radio" name="item" value="9">
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/Balloon Popper.mp4" >
+            <video controls muted loop preload="metadata" src="Unity Games/Balloon Popper.mp4" >
                 <source src="Unity Games/Hunt Monster.mp4">
                 This browser do not suport mp4.
             </video> 
@@ -444,7 +443,7 @@
 
         <input type="radio" name="item" value="10">
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/Ghost Runner.mp4" checked>
+            <video controls muted loop preload="metadata" src="Unity Games/Ghost Runner.mp4" checked>
                 <source src="Unity Games/Ghost Runner.mp4" >
                 This browser do not suport mp4.
             </video> 
@@ -452,7 +451,7 @@
 
         <input type="radio" name="item" value="11">
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/Jump the Girl.mp4">
+            <video controls muted loop preload="metadata" src="Unity Games/Jump the Girl.mp4">
                 <source src="Unity Games/Jump the Girl.mp4">
                 This browser do not suport mp4.
             </video> 
@@ -460,7 +459,7 @@
     
         <input type="radio" name="item" value="12">
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/Monster Chase.mp4">
+            <video controls muted loop preload="metadata" src="Unity Games/Monster Chase.mp4">
                 <source src="Unity Games/Monster Chase.mp4">
                 This browser do not suport mp4.
             </video> 
@@ -468,7 +467,7 @@
     
         <input type="radio" name="item" value="13">
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/Obstacle.mp4" >
+            <video controls muted loop preload="metadata" src="Unity Games/Obstacle.mp4" >
                 <source src="Unity Games/Obstacle.mp4">
                 This browser do not suport mp4.
             </video> 
@@ -476,7 +475,7 @@
 
         <input type="radio" name="item" value="14">
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/Quiz Mania.mp4" >
+            <video controls muted loop preload="metadata" src="Unity Games/Quiz Mania.mp4" >
                 <source src="Unity Games/Quiz Mania.mp4">
                 This browser do not suport mp4.
             </video> 
@@ -484,7 +483,7 @@
     
         <input type="radio" name="item" value="15">
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/Rocket Boost.mp4" >
+            <video controls muted loop preload="metadata" src="Unity Games/Rocket Boost.mp4" >
                 <source src="Unity Games/Rocket Boost.mp4">
                 This browser do not suport mp4.
             </video> 
@@ -492,7 +491,7 @@
 
         <input type="radio" name="item" value="16" >
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/Roll the Ball.mp4" >
+            <video controls muted loop preload="metadata" src="Unity Games/Roll the Ball.mp4" >
                 <source src="Unity Games/Roll the Ball.mp4">
                 This browser do not suport mp4.
             </video> 
@@ -500,7 +499,7 @@
 
         <input type="radio" name="item" value="17" >
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/Sliding Game.mp4">
+            <video controls muted loop preload="metadata" src="Unity Games/Sliding Game.mp4">
                 <source src="Unity Games/Sliding Game.mp4">
                 This browser do not suport mp4.
             </video> 
@@ -508,7 +507,7 @@
     
         <input type="radio" name="item" value="18">
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/SnowBorading.mp4">
+            <video controls muted loop preload="metadata" src="Unity Games/SnowBorading.mp4">
                 <source src="Unity Games/SnowBorading.mp4">
                 This browser do not suport mp4.
             </video> 
@@ -516,7 +515,7 @@
     
         <input type="radio" name="item" value="19">
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/Tile Trek.mp4" >
+            <video controls muted loop preload="metadata" src="Unity Games/Tile Trek.mp4" >
                 <source src="Unity Games/Tile Trek.mp4">
                 This browser do not suport mp4.
             </video> 
@@ -524,7 +523,7 @@
 
         <input type="radio" name="item" value="20">
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/Tower Defense.mp4" >
+            <video controls muted loop preload="metadata" src="Unity Games/Tower Defense.mp4" >
                 <source src="Unity Games/Tower Defense.mp4">
                 This browser do not suport mp4.
             </video> 
@@ -532,7 +531,7 @@
     
         <input type="radio" name="item" value="21">
         <div class="video-container">
-            <video controls autoplay muted loop src="Unity Games/Turbo Delivery.mp4" >
+            <video controls muted loop preload="metadata" src="Unity Games/Turbo Delivery.mp4" >
                 <source src="Unity Games/Turbo Delivery.mp4">
                 This browser do not suport mp4.
             </video> 
@@ -541,7 +540,7 @@
 
 
 <!-- Arts Section -->
-<h1 style="text-align: center; font-size: 50px;">Artworks</h1>
+<h1>Artworks</h1>
         <div class="carousel" id="test2">
             <input type="radio" name="item2" value="1" checked>
             <div>
@@ -631,7 +630,7 @@
             <input type="radio" name="item2" value="18">
             <div>
                 <div class="video-container">
-                    <video controls autoplay muted loop src="Blender/SeaWaves.mp4" >
+                    <video controls muted loop preload="metadata" src="Blender/SeaWaves.mp4" >
                         <source src="Blender/SeaWaves.mp4" >
                         This browser do not suport mp4.
                     </video> 
@@ -641,7 +640,7 @@
             <input type="radio" name="item2" value="19">
             <div>
                 <div class="video-container">
-                    <video controls autoplay muted loop src="Blender/MoonRise.mp4" >
+                    <video controls muted loop preload="metadata" src="Blender/MoonRise.mp4" >
                         <source src="Blender/MoonRise.mp4" >
                         This browser do not suport mp4.
                     </video> 
@@ -651,7 +650,7 @@
             <input type="radio" name="item2" value="20">
             <div>
                 <div class="video-container">
-                    <video controls autoplay muted loop src="Blender/Boxs.mp4" >
+                    <video controls muted loop preload="metadata" src="Blender/Boxs.mp4" >
                         <source src="Blender/Boxs.mp4" >
                         This browser do not suport mp4.
                     </video> 
@@ -661,7 +660,7 @@
             <input type="radio" name="item2" value="21">
             <div>
                 <div class="video-container">
-                    <video controls autoplay muted loop src="Blender/Legion.mkv" >
+                    <video controls muted loop preload="metadata" src="Blender/Legion.mkv" >
                         <source src="Blender/Legion.mkv" >
                         This browser do not suport mp4.
                     </video> 
@@ -671,7 +670,7 @@
             <input type="radio" name="item2" value="22">
             <div>
                 <div class="video-container">
-                    <video controls autoplay muted loop src="Blender/Plane Fly.mp4" >
+                    <video controls muted loop preload="metadata" src="Blender/Plane Fly.mp4" >
                         <source src="Blender/Plane Fly.mp4" >
                         This browser do not suport mp4.
                     </video> 
@@ -681,7 +680,7 @@
             <input type="radio" name="item2" value="23">
             <div>
                 <div class="video-container">
-                    <video controls autoplay muted loop src="Blender/Scene.mp4" >
+                    <video controls muted loop preload="metadata" src="Blender/Scene.mp4" >
                         <source src="Blender/Scene.mp4" >
                         This browser do not suport mp4.
                     </video> 
@@ -692,7 +691,7 @@
             <input type="radio" name="item2" value="24">
             <div>
                 <div class="video-container">
-                    <video controls autoplay muted loop src="Blender/Glitter.mp4" >
+                    <video controls muted loop preload="metadata" src="Blender/Glitter.mp4" >
                         <source src="Blender/Glitter.mp4" >
                         This browser do not suport mp4.
                     </video> 
@@ -703,7 +702,7 @@
             <input type="radio" name="item2" value="25">
             <div>
                 <div class="video-container">
-                    <video controls autoplay muted loop src="Blender/Retro.mp4" >
+                    <video controls muted loop preload="metadata" src="Blender/Retro.mp4" >
                         <source src="Blender/Retro.mp4" >
                         This browser do not suport mp4.
                     </video> 
@@ -711,7 +710,6 @@
             </div>
         </div>
     </section>
-
 <!-- Skills Section -->
 <section id="skills" class="skills">
 <br>
@@ -815,7 +813,7 @@
     </div>
 
     <div class="form-container">
-        <form action="https://formsubmit.co/chitranshnishad27@gmail.com" method="POST"   class="contact-form" />
+        <form action="https://formsubmit.co/chitranshnishad27@gmail.com" method="POST" class="contact-form">
             <h2>
                 Contact Form
             </h2>
@@ -828,7 +826,7 @@
         </form>
     </div>
     </section>
-    <br>
+<br>
     <br>
     <footer>
         <p>© 2024 Chitransh. All rights reserved.</p>
@@ -964,7 +962,7 @@
         }, { margin: '-60px 0px' });
     }
 
-    /* ── Mechanic AI timeline (alternate slide-in) ────────────── */
+    /* Tools and System timeline (alternate slide-in) */
     document.querySelectorAll('.mechanic-item').forEach((item, i) => {
         const fromLeft  = i % 2 === 0;
         const content   = item.querySelector('.mechanic-content');
@@ -1037,6 +1035,91 @@
         });
     }, { threshold: 0.3 });
     allSections.forEach(s => navObserver.observe(s));
+    </script>
+
+    <script>
+        // Replace the radio-only carousels with accessible brutalist controls.
+        document.querySelectorAll('.carousel').forEach((carousel) => {
+            const inputs = Array.from(carousel.querySelectorAll(':scope > input[type="radio"]'));
+            if (!inputs.length) return;
+
+            const panels = inputs
+                .map((input) => input.nextElementSibling)
+                .filter(Boolean);
+
+            let activeIndex = Math.max(0, inputs.findIndex((input) => input.checked));
+
+            panels.forEach((panel) => panel.classList.add('carousel-panel'));
+
+            const prev = document.createElement('button');
+            prev.type = 'button';
+            prev.className = 'carousel-arrow prev';
+            prev.setAttribute('aria-label', 'Previous slide');
+            prev.textContent = '<';
+
+            const next = document.createElement('button');
+            next.type = 'button';
+            next.className = 'carousel-arrow next';
+            next.setAttribute('aria-label', 'Next slide');
+            next.textContent = '>';
+
+            const syncCarousel = () => {
+                panels.forEach((panel, index) => {
+                    const isActive = index === activeIndex;
+                    panel.classList.toggle('is-active', isActive);
+                    inputs[index].checked = isActive;
+                });
+                prev.disabled = activeIndex === 0;
+                next.disabled = activeIndex === panels.length - 1;
+            };
+
+            prev.addEventListener('click', () => {
+                if (activeIndex > 0) {
+                    activeIndex -= 1;
+                    syncCarousel();
+                }
+            });
+
+            next.addEventListener('click', () => {
+                if (activeIndex < panels.length - 1) {
+                    activeIndex += 1;
+                    syncCarousel();
+                }
+            });
+
+            inputs.forEach((input, index) => {
+                input.addEventListener('change', () => {
+                    activeIndex = index;
+                    syncCarousel();
+                });
+            });
+
+            carousel.append(prev, next);
+            carousel.classList.add('enhanced');
+            syncCarousel();
+        });
+    </script>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+        const storedTheme = localStorage.getItem('portfolio-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        const setTheme = (theme) => {
+            const isDark = theme === 'dark';
+            document.body.classList.toggle('dark-theme', isDark);
+            themeToggle.setAttribute('aria-pressed', String(isDark));
+            themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+            themeIcon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+            localStorage.setItem('portfolio-theme', theme);
+        };
+
+        setTheme(storedTheme || (prefersDark ? 'dark' : 'light'));
+
+        themeToggle.addEventListener('click', () => {
+            setTheme(document.body.classList.contains('dark-theme') ? 'light' : 'dark');
+        });
     </script>
 
     <script>
