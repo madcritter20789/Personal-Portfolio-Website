@@ -15,6 +15,7 @@
             <a href="#education">Education</a>
             <a href="#projects">Projects</a>
             <a href="#research">Research</a>
+            <a href="#published-games">Published Games</a>
             <a href="#tools-system">Tools and System</a>
             <a href="#Showcase">Showcase</a>
             <a href="#skills">Skills</a>
@@ -46,6 +47,7 @@
                 <a href="https://x.com/NishadChitransh" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="https://www.instagram.com/chitransh4124/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://medium.com/@chitranshnishad27" target="_blank" aria-label="Medium"><i class="fa-brands fa-medium"></i></a>
+                <a href="https://madcritter20789.itch.io/" target="_blank" aria-label="itch.io"><i class="fa-brands fa-itch-io"></i></a>
             </div>
             <div class="home-actions">
                 <a href="#contact" class="btn">Contact me</a>
@@ -310,6 +312,77 @@
             </ul>
         </div>
 
+    </div>
+</section>
+<!-- Published Games Section -->
+<section id="published-games" class="published-games">
+    <div style="text-align:center"><span class="section-tag">Shipped</span></div>
+    <h1>Published Games</h1>
+    <p>Games I've shipped and made available to players worldwide:</p>
+    <div class="published-games-container">
+
+        <div class="published-game-item">
+            <div class="game-cover-wrap">
+                <img src="ObstacleKicks.png" alt="Obstacle Kicks cover" class="game-cover">
+            </div>
+            <div class="game-platform-badge itch">itch.io</div>
+            <h3>Obstacle Kicks</h3>
+            <p class="game-tech">Unity 3D</p>
+            <ul>
+                <li>Drag and stretch to aim your shot — the longer the stretch, the more powerful the kick.</li>
+                <li>Choose from different football formations to set your team up for success.</li>
+                <li>Stationary poles represent opposing players, adding a strategic layer to every shot.</li>
+            </ul>
+            <div class="game-cta">
+                <a href="https://madcritter20789.itch.io/obstacle-kicks" target="_blank" class="btn">
+                    <i class="fa-brands fa-itch-io"></i>&nbsp; Play on itch.io
+                </a>
+            </div>
+        </div>
+
+        <div class="published-game-item">
+            <div class="game-cover-wrap">
+                <img src="SpeedSurge.png" alt="Speed Surge cover" class="game-cover">
+            </div>
+            <div class="game-platform-badge itch">itch.io</div>
+            <h3>Speed Surge</h3>
+            <p class="game-tech">Unity 3D</p>
+            <ul>
+                <li>High-speed endless runner that tests your reflexes to the limit.</li>
+                <li>Dodge incoming obstacles across dynamically generated tracks.</li>
+                <li>Designed for pick-up-and-play sessions with escalating difficulty.</li>
+            </ul>
+            <div class="game-cta">
+                <a href="https://madcritter20789.itch.io/speed-surge" target="_blank" class="btn">
+                    <i class="fa-brands fa-itch-io"></i>&nbsp; Play on itch.io
+                </a>
+            </div>
+        </div>
+
+        <div class="published-game-item">
+            <div class="game-cover-wrap">
+                <img src="TicTacToeTwist.webp" alt="Tic Tac Toe cover" class="game-cover">
+            </div>
+            <div class="game-platform-badge play">Google Play</div>
+            <h3>Tic Tac Toe</h3>
+            <p class="game-tech">Unity / Android</p>
+            <ul>
+                <li>Classic Tic Tac Toe reimagined as a polished Android app.</li>
+                <li>Play against a smart AI or challenge a friend in local two-player mode.</li>
+                <li>Clean UI, smooth performance — published on the Google Play Store.</li>
+            </ul>
+            <div class="game-cta">
+                <a href="https://play.google.com/store/apps/details?id=com.MadGames.TicTacToe" target="_blank" class="btn btn-alt">
+                    <i class="fa-brands fa-google-play"></i>&nbsp; Get on Google Play
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="itch-profile-cta">
+        <a href="https://madcritter20789.itch.io/" target="_blank" class="btn">
+            <i class="fa-brands fa-itch-io"></i>&nbsp; View All on itch.io
+        </a>
     </div>
 </section>
 <!-- Tools and System Section -->
@@ -808,6 +881,7 @@
                 <a href="https://x.com/NishadChitransh" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="https://www.instagram.com/chitransh4124/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://medium.com/@chitranshnishad27" target="_blank" aria-label="Medium"><i class="fa-brands fa-medium"></i></a>
+                <a href="https://madcritter20789.itch.io/" target="_blank" aria-label="itch.io"><i class="fa-brands fa-itch-io"></i></a>
             </div>
         </div>
     </div>
@@ -929,6 +1003,17 @@
             animate(target,
                 { opacity: [0, 1], y: [40, 0], scale: [0.96, 1] },
                 { duration: 0.48, delay: (i % 2) * 0.08, ease }
+            ).then(() => cleanupTransform(target));
+            stop();
+        }, { margin: '-40px 0px' });
+    });
+
+    /* ── Published game cards (staggered in threes) ─────────────── */
+    document.querySelectorAll('.published-game-item').forEach((el, i) => {
+        const stop = inView(el, ({ target }) => {
+            animate(target,
+                { opacity: [0, 1], y: [40, 0], scale: [0.96, 1] },
+                { duration: 0.48, delay: (i % 3) * 0.1, ease }
             ).then(() => cleanupTransform(target));
             stop();
         }, { margin: '-40px 0px' });
