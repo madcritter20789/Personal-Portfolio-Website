@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Chitransh favicon">
+  <rect width="64" height="64" fill="#f7f7f2"/>
+  <path d="M0 0h64v64H0z" fill="url(#dots)" opacity=".45"/>
+  <path d="M8 9h44v44H8z" fill="#ff7a1a" stroke="#111111" stroke-width="5"/>
+  <path d="M16 17h40v40H16z" fill="#00d5c8" stroke="#111111" stroke-width="4"/>
+  <text x="36" y="38" text-anchor="middle" dominant-baseline="middle" font-family="Arial Black, Impact, sans-serif" font-size="34" font-weight="900" fill="#111111">C</text>
+  <path d="M10 8h13v4H10zM50 50h8v4h-8z" fill="#111111"/>
+  <defs>
+    <pattern id="dots" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1" fill="#111111"/>
+    </pattern>
+  </defs>
+</svg>

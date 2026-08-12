@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>Chitransh - Portfolio</title>
+</head>
 <body class="non-home-page">
     <header>
         <a href="#home" class="logo">Chitransh</a>
@@ -13,10 +15,10 @@
             <a href="#home">Home</a>
             <a href="#experience">Experience</a>
             <a href="#education">Education</a>
-            <a href="#projects">Projects</a>
-            <a href="#research">Research</a>
             <a href="#published-games">Published Games</a>
             <a href="#tools-system">Tools and System</a>
+            <a href="#projects">Projects</a>
+            <a href="#research">Research</a>
             <a href="#Showcase">Showcase</a>
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
@@ -65,6 +67,16 @@
         
         <div class="experience-container">
             <div class="experience-item">
+                <h3>Unity Developer</h3>
+                <p class="company-name">Neela Media Tech <span>| Current</span></p>
+                <ul class="experience-details">
+                    <li>Developing engaging games and interactive experiences using Unity engine.</li>
+                    <li>Collaborating with cross-functional teams on game design and implementation.</li>
+                    <li>Optimizing performance and delivering high-quality game solutions.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
                 <h3>Game Developer</h3>
                 <p class="company-name">Harmonia Laboriosa <span>| 2023-2024</span></p>
                 <ul class="experience-details">
@@ -91,16 +103,6 @@
                 <ul class="experience-details">
                     <li>Partnered with professors to design educational games.</li>
                     <li>Collaborated with professors to design games aimed at enhancing memory and logical skills.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Unity Developer</h3>
-                <p class="company-name">Neela Media Tech <span>| Current</span></p>
-                <ul class="experience-details">
-                    <li>Developing engaging games and interactive experiences using Unity engine.</li>
-                    <li>Collaborating with cross-functional teams on game design and implementation.</li>
-                    <li>Optimizing performance and delivering high-quality game solutions.</li>
                 </ul>
             </div>
         </div>
@@ -132,6 +134,127 @@
             </ul>
         </div>
     </section>
+<!-- Published Games Section -->
+<section id="published-games" class="published-games">
+    <div style="text-align:center"><span class="section-tag">Shipped</span></div>
+    <h1>Published Games</h1>
+    <p>Games I've shipped and made available to players worldwide:</p>
+    <div class="published-games-container">
+
+        <div class="published-game-item">
+            <div class="game-cover-wrap">
+                <img src="ObstacleKicks.png" alt="Obstacle Kicks cover" class="game-cover">
+            </div>
+            <div class="game-platform-badge itch">itch.io</div>
+            <h3>Obstacle Kicks</h3>
+            <p class="game-tech">Unity 3D</p>
+            <ul>
+                <li>Drag and stretch to aim your shot — the longer the stretch, the more powerful the kick.</li>
+                <li>Choose from different football formations to set your team up for success.</li>
+                <li>Stationary poles represent opposing players, adding a strategic layer to every shot.</li>
+            </ul>
+            <div class="game-cta">
+                <a href="https://madcritter20789.itch.io/obstacle-kicks" target="_blank" class="btn">
+                    <i class="fa-brands fa-itch-io"></i>&nbsp; Play on itch.io
+                </a>
+            </div>
+        </div>
+
+        <div class="published-game-item">
+            <div class="game-cover-wrap">
+                <img src="SpeedSurge.png" alt="Speed Surge cover" class="game-cover">
+            </div>
+            <div class="game-platform-badge itch">itch.io</div>
+            <h3>Speed Surge</h3>
+            <p class="game-tech">Unity 3D</p>
+            <ul>
+                <li>High-speed endless runner that tests your reflexes to the limit.</li>
+                <li>Dodge incoming obstacles across dynamically generated tracks.</li>
+                <li>Designed for pick-up-and-play sessions with escalating difficulty.</li>
+            </ul>
+            <div class="game-cta">
+                <a href="https://madcritter20789.itch.io/speed-surge" target="_blank" class="btn">
+                    <i class="fa-brands fa-itch-io"></i>&nbsp; Play on itch.io
+                </a>
+            </div>
+        </div>
+
+        <div class="published-game-item">
+            <div class="game-cover-wrap">
+                <img src="TicTacToeTwist.webp" alt="Tic Tac Toe cover" class="game-cover">
+            </div>
+            <div class="game-platform-badge play">Google Play</div>
+            <h3>Tic Tac Toe</h3>
+            <p class="game-tech">Unity / Android</p>
+            <ul>
+                <li>Classic Tic Tac Toe reimagined as a polished Android app.</li>
+                <li>Play against a smart AI or challenge a friend in local two-player mode.</li>
+                <li>Clean UI, smooth performance — published on the Google Play Store.</li>
+            </ul>
+            <div class="game-cta">
+                <a href="https://play.google.com/store/apps/details?id=com.MadGames.TicTacToe" target="_blank" class="btn btn-alt">
+                    <i class="fa-brands fa-google-play"></i>&nbsp; Get on Google Play
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="itch-profile-cta">
+        <a href="https://madcritter20789.itch.io/" target="_blank" class="btn">
+            <i class="fa-brands fa-itch-io"></i>&nbsp; View All on itch.io
+        </a>
+    </div>
+</section>
+<!-- Tools and System Section -->
+<section id="tools-system" class="mechanic-ai">
+    <br><br>
+    <span class="section-tag">Unity Experiments</span>
+    <h1>Tools and System</h1>
+    <p>Unity tools, gameplay systems, and AI experiments in action</p>
+
+    <div class="mechanic-timeline">
+
+        <!-- Item 1: text left, video right -->
+        <div class="mechanic-item">
+            <div class="mechanic-content left">
+                <h3>Frame Recorder</h3>
+                <p class="mechanic-subtitle">Unity Tool &nbsp;|&nbsp; Gameplay Capture</p>
+                <p class="mechanic-desc">A frame-based replay system in Unity that records and restores game state per-frame using a modular architecture where individual components (transforms, physics, animations) implement a shared Recorder interface. Frame states are stored in dictionaries keyed by frame number, enabling efficient lookup, smooth scrubbing, and flexible timeline changes. A central PlaybackController manages recording and playback modes while physics is disabled during playback for accurate state restoration — powering rewinding, killcams, instant replays, and debugging tools without altering the core system.</p>
+            </div>
+            <div class="mechanic-dot"><i class="fa-solid fa-video"></i></div>
+            <div class="mechanic-video right">
+                <video controls muted loop src="Unity Games/Mechanic/Frame _Recorder.mp4"></video>
+            </div>
+        </div>
+
+        <!-- Item 2: video left, text right -->
+        <div class="mechanic-item">
+            <div class="mechanic-video left">
+                <video controls muted loop src="Unity Games/Mechanic/Procedural_Genration.mp4"></video>
+            </div>
+            <div class="mechanic-dot"><i class="fa-solid fa-cube"></i></div>
+            <div class="mechanic-content right">
+                <h3>Procedural Generation</h3>
+                <p class="mechanic-subtitle">Unity Algorithm &nbsp;|&nbsp; Level Design</p>
+                <p class="mechanic-desc">Procedural terrain generation using layered Perlin noise to create realistic landscapes from a height map, where multiple noise octaves add large-scale shapes and fine surface detail. Height data is shaped with fall-off maps to form islands or bounded terrain, then converted into a 3D mesh with vertices, triangles, and UVs. Visual variety comes through height-based biome coloring (water, grass, snow) rendered efficiently via vertex colors — producing vast, varied worlds with minimal manual design.</p>
+            </div>
+        </div>
+
+        <!-- Item 3: text left, video right -->
+        <div class="mechanic-item">
+            <div class="mechanic-content left">
+                <h3>Motion Matching</h3>
+                <p class="mechanic-subtitle">Unity Animation &nbsp;|&nbsp; Character AI</p>
+                <p class="mechanic-desc">A data-driven approach where every frame of animation is treated as a searchable pose in a database. Instead of manually defining transitions, the system continuously selects the best-fitting pose by comparing the character's current state and predicted trajectory against precomputed animation data via a cost function. Key features like foot positions, velocities, and future trajectory guide selection, while thresholds, clip-change penalties, and limited search frequency ensure stability. Built on Unity's Playables API — making new animations as simple as baking them into the database for scalable, responsive, natural character movement.</p>
+            </div>
+            <div class="mechanic-dot"><i class="fa-solid fa-person-running"></i></div>
+            <div class="mechanic-video right">
+                <video controls muted loop src="Unity Games/Mechanic/Motion_Matching.mp4"></video>
+            </div>
+        </div>
+
+    </div>
+</section>
 <!-- Projects Section -->
 <section id="projects" class="projects">
 <br>
@@ -310,127 +433,6 @@
                 <li>Presented at NCRRAC'24, organized by the Department of CSE, SRM Institute of Science and Technology, Ramapuram, Chennai.</li>
                 <li>System adapts meal plans dynamically based on user dietary preferences, health goals, and nutritional data.</li>
             </ul>
-        </div>
-
-    </div>
-</section>
-<!-- Published Games Section -->
-<section id="published-games" class="published-games">
-    <div style="text-align:center"><span class="section-tag">Shipped</span></div>
-    <h1>Published Games</h1>
-    <p>Games I've shipped and made available to players worldwide:</p>
-    <div class="published-games-container">
-
-        <div class="published-game-item">
-            <div class="game-cover-wrap">
-                <img src="ObstacleKicks.png" alt="Obstacle Kicks cover" class="game-cover">
-            </div>
-            <div class="game-platform-badge itch">itch.io</div>
-            <h3>Obstacle Kicks</h3>
-            <p class="game-tech">Unity 3D</p>
-            <ul>
-                <li>Drag and stretch to aim your shot — the longer the stretch, the more powerful the kick.</li>
-                <li>Choose from different football formations to set your team up for success.</li>
-                <li>Stationary poles represent opposing players, adding a strategic layer to every shot.</li>
-            </ul>
-            <div class="game-cta">
-                <a href="https://madcritter20789.itch.io/obstacle-kicks" target="_blank" class="btn">
-                    <i class="fa-brands fa-itch-io"></i>&nbsp; Play on itch.io
-                </a>
-            </div>
-        </div>
-
-        <div class="published-game-item">
-            <div class="game-cover-wrap">
-                <img src="SpeedSurge.png" alt="Speed Surge cover" class="game-cover">
-            </div>
-            <div class="game-platform-badge itch">itch.io</div>
-            <h3>Speed Surge</h3>
-            <p class="game-tech">Unity 3D</p>
-            <ul>
-                <li>High-speed endless runner that tests your reflexes to the limit.</li>
-                <li>Dodge incoming obstacles across dynamically generated tracks.</li>
-                <li>Designed for pick-up-and-play sessions with escalating difficulty.</li>
-            </ul>
-            <div class="game-cta">
-                <a href="https://madcritter20789.itch.io/speed-surge" target="_blank" class="btn">
-                    <i class="fa-brands fa-itch-io"></i>&nbsp; Play on itch.io
-                </a>
-            </div>
-        </div>
-
-        <div class="published-game-item">
-            <div class="game-cover-wrap">
-                <img src="TicTacToeTwist.webp" alt="Tic Tac Toe cover" class="game-cover">
-            </div>
-            <div class="game-platform-badge play">Google Play</div>
-            <h3>Tic Tac Toe</h3>
-            <p class="game-tech">Unity / Android</p>
-            <ul>
-                <li>Classic Tic Tac Toe reimagined as a polished Android app.</li>
-                <li>Play against a smart AI or challenge a friend in local two-player mode.</li>
-                <li>Clean UI, smooth performance — published on the Google Play Store.</li>
-            </ul>
-            <div class="game-cta">
-                <a href="https://play.google.com/store/apps/details?id=com.MadGames.TicTacToe" target="_blank" class="btn btn-alt">
-                    <i class="fa-brands fa-google-play"></i>&nbsp; Get on Google Play
-                </a>
-            </div>
-        </div>
-
-    </div>
-    <div class="itch-profile-cta">
-        <a href="https://madcritter20789.itch.io/" target="_blank" class="btn">
-            <i class="fa-brands fa-itch-io"></i>&nbsp; View All on itch.io
-        </a>
-    </div>
-</section>
-<!-- Tools and System Section -->
-<section id="tools-system" class="mechanic-ai">
-    <br><br>
-    <span class="section-tag">Unity Experiments</span>
-    <h1>Tools and System</h1>
-    <p>Unity tools, gameplay systems, and AI experiments in action</p>
-
-    <div class="mechanic-timeline">
-
-        <!-- Item 1: text left, video right -->
-        <div class="mechanic-item">
-            <div class="mechanic-content left">
-                <h3>Frame Recorder</h3>
-                <p class="mechanic-subtitle">Unity Tool &nbsp;|&nbsp; Gameplay Capture</p>
-                <p class="mechanic-desc">A frame-based replay system in Unity that records and restores game state per-frame using a modular architecture where individual components (transforms, physics, animations) implement a shared Recorder interface. Frame states are stored in dictionaries keyed by frame number, enabling efficient lookup, smooth scrubbing, and flexible timeline changes. A central PlaybackController manages recording and playback modes while physics is disabled during playback for accurate state restoration — powering rewinding, killcams, instant replays, and debugging tools without altering the core system.</p>
-            </div>
-            <div class="mechanic-dot"><i class="fa-solid fa-video"></i></div>
-            <div class="mechanic-video right">
-                <video controls muted loop src="Unity Games/Mechanic/Frame _Recorder.mp4"></video>
-            </div>
-        </div>
-
-        <!-- Item 2: video left, text right -->
-        <div class="mechanic-item">
-            <div class="mechanic-video left">
-                <video controls muted loop src="Unity Games/Mechanic/Procedural_Genration.mp4"></video>
-            </div>
-            <div class="mechanic-dot"><i class="fa-solid fa-cube"></i></div>
-            <div class="mechanic-content right">
-                <h3>Procedural Generation</h3>
-                <p class="mechanic-subtitle">Unity Algorithm &nbsp;|&nbsp; Level Design</p>
-                <p class="mechanic-desc">Procedural terrain generation using layered Perlin noise to create realistic landscapes from a height map, where multiple noise octaves add large-scale shapes and fine surface detail. Height data is shaped with fall-off maps to form islands or bounded terrain, then converted into a 3D mesh with vertices, triangles, and UVs. Visual variety comes through height-based biome coloring (water, grass, snow) rendered efficiently via vertex colors — producing vast, varied worlds with minimal manual design.</p>
-            </div>
-        </div>
-
-        <!-- Item 3: text left, video right -->
-        <div class="mechanic-item">
-            <div class="mechanic-content left">
-                <h3>Motion Matching</h3>
-                <p class="mechanic-subtitle">Unity Animation &nbsp;|&nbsp; Character AI</p>
-                <p class="mechanic-desc">A data-driven approach where every frame of animation is treated as a searchable pose in a database. Instead of manually defining transitions, the system continuously selects the best-fitting pose by comparing the character's current state and predicted trajectory against precomputed animation data via a cost function. Key features like foot positions, velocities, and future trajectory guide selection, while thresholds, clip-change penalties, and limited search frequency ensure stability. Built on Unity's Playables API — making new animations as simple as baking them into the database for scalable, responsive, natural character movement.</p>
-            </div>
-            <div class="mechanic-dot"><i class="fa-solid fa-person-running"></i></div>
-            <div class="mechanic-video right">
-                <video controls muted loop src="Unity Games/Mechanic/Motion_Matching.mp4"></video>
-            </div>
         </div>
 
     </div>
@@ -793,67 +795,87 @@
         <br>
     <div class="skill-container">
         <div class="skill-item">
-            <h3>Unity</h3>
-        <ul>
-            <li>
-            <span class="bar"><span class="Unity"></span></span>
-            </li>
-        </ul>
-        </div>
-        <div class="skill-item">
-            <h3>C#</h3>
+            <h3>Unity Game Development</h3>
+            <p>2D/3D gameplay, mobile builds, UI, physics, animation, optimization.</p>
             <ul>
-                <li>
-                <span class="bar"><span class="Language"></span></span>
-                </li>
+                <li><span class="bar"><span class="Unity"></span></span></li>
             </ul>
         </div>
         <div class="skill-item">
-            <h3>C++</h3>
+            <h3>C# Gameplay Programming</h3>
+            <p>Player controllers, enemy AI, inventory, scoring, replay tools, systems.</p>
             <ul>
-                <li>
-                <span class="bar"><span class="Language"></span></span>
-                </li>
+                <li><span class="bar"><span class="Language"></span></span></li>
             </ul>
         </div>
         <div class="skill-item">
-            <h3>C</h3>
+            <h3>Game AI and Mechanics</h3>
+            <p>Pathfinding, boss phases, motion matching, procedural generation.</p>
             <ul>
-                <li>
-                <span class="bar"><span class="Language"></span></span>
-                </li>
+                <li><span class="bar"><span class="GameAI"></span></span></li>
             </ul>
         </div>
         <div class="skill-item">
-            <h3>Python</h3>
+            <h3>Unreal Engine</h3>
+            <p>First-person interaction, physics destruction, level design workflows.</p>
             <ul>
-                <li>
-                <span class="bar"><span class="Python"></span></span>
-                </li>
+                <li><span class="bar"><span class="Unreal"></span></span></li>
             </ul>
         </div>
         <div class="skill-item">
-            <h3>Adobe XD</h3>
+            <h3>Python and Automation</h3>
+            <p>Reddit bots, market tracking, sentiment analysis, data processing.</p>
             <ul>
-                <li>
-                <span class="bar"><span class="Adobe"></span></span>
-                </li>
+                <li><span class="bar"><span class="Python"></span></span></li>
             </ul>
         </div>
         <div class="skill-item">
-            <h3>Blender</h3>
+            <h3>AI App Development</h3>
+            <p>Gemini tools, hook generation, script writing, AI-assisted creator apps.</p>
             <ul>
-                <li>
-                <span class="bar"><span class="Blender"></span></span>
-                </li>
+                <li><span class="bar"><span class="AIApps"></span></span></li>
             </ul>
         </div>
         <div class="skill-item">
-            <h3>Sketchbook</h3>
+            <h3>Full-Stack Web</h3>
+            <p>Next.js, FastAPI, Node.js APIs, Supabase, Vercel and Render deployment.</p>
             <ul>
-                <li>
-                <span class="bar"><span class="Sketchbook"></span></span>
-                </li>
+                <li><span class="bar"><span class="FullStack"></span></span></li>
+            </ul>
+        </div>
+        <div class="skill-item">
+            <h3>AR and Android Publishing</h3>
+            <p>Unity AR placement, Android builds, Google Play and itch.io releases.</p>
+            <ul>
+                <li><span class="bar"><span class="Publishing"></span></span></li>
+            </ul>
+        </div>
+        <div class="skill-item">
+            <h3>Blender and 3D Art</h3>
+            <p>3D scenes, animation, materials, visual presentation, showcase assets.</p>
+            <ul>
+                <li><span class="bar"><span class="Blender"></span></span></li>
+            </ul>
+        </div>
+        <div class="skill-item">
+            <h3>UI/UX and Prototyping</h3>
+            <p>Game menus, app flows, creator tools, Adobe XD and interface polish.</p>
+            <ul>
+                <li><span class="bar"><span class="Adobe"></span></span></li>
+            </ul>
+        </div>
+        <div class="skill-item">
+            <h3>Research and ML</h3>
+            <p>Video summarization, multi-modal systems, embeddings, conference work.</p>
+            <ul>
+                <li><span class="bar"><span class="ResearchML"></span></span></li>
+            </ul>
+        </div>
+        <div class="skill-item">
+            <h3>C / C++ Foundations</h3>
+            <p>Core programming, performance thinking, algorithms, engine-level basics.</p>
+            <ul>
+                <li><span class="bar"><span class="CppCore"></span></span></li>
             </ul>
         </div>
     </div>
@@ -1033,7 +1055,10 @@
     /* ── Skill bars (width animation on scroll) ───────────────── */
     const SKILL_WIDTHS = {
         '.Unity': '80%', '.Python': '70%', '.Language': '90%',
-        '.Adobe': '60%', '.Blender': '60%', '.Sketchbook': '25%'
+        '.Adobe': '70%', '.Blender': '75%', '.Sketchbook': '25%',
+        '.GameAI': '82%', '.Unreal': '62%', '.AIApps': '78%',
+        '.FullStack': '76%', '.Publishing': '72%', '.ResearchML': '74%',
+        '.CppCore': '68%'
     };
     const skillContainer = document.querySelector('.skill-container');
     if (skillContainer) {

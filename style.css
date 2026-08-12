@@ -1161,6 +1161,13 @@ span {
 .Adobe     { width: 0%; }
 .Blender   { width: 0%; }
 .Sketchbook{ width: 0%; }
+.GameAI    { width: 0%; }
+.Unreal    { width: 0%; }
+.AIApps    { width: 0%; }
+.FullStack { width: 0%; }
+.Publishing{ width: 0%; }
+.ResearchML{ width: 0%; }
+.CppCore   { width: 0%; }
 
 @keyframes Unity {
     from {

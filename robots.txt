@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://madcritter20789.github.io/Personal-Portfolio-Website/sitemap.xml
