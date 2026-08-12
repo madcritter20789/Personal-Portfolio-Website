@@ -2551,6 +2551,25 @@ input:checked ~ input {
     background: var(--ink);
 }
 
+.carousel .portrait-video {
+    display: grid;
+    place-items: center;
+    background:
+        linear-gradient(90deg, rgba(0, 201, 190, 0.18) 0 18px, transparent 18px calc(100% - 18px), rgba(255, 122, 24, 0.18) calc(100% - 18px)),
+        var(--ink);
+}
+
+.carousel .portrait-video .portrait-fit {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: contain;
+    border-left: var(--brutal-border);
+    border-right: var(--brutal-border);
+    box-shadow: 7px 0 0 var(--secondary-color), -7px 0 0 var(--accent-color);
+}
+
 .contact {
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
@@ -2928,6 +2947,18 @@ section > br {
     display: block;
 }
 
+.carousel.enhanced .carousel-panel.portrait-video {
+    display: grid;
+    place-items: center;
+}
+
+.carousel.enhanced .carousel-panel.portrait-video .portrait-fit {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
 .carousel-arrow {
     position: absolute;
     top: 50%;
@@ -3041,9 +3072,10 @@ section,
 }
 
 .home {
-    min-height: calc(100vh - 7.2rem) !important;
-    padding-top: 3.4rem !important;
-    padding-bottom: 3.4rem !important;
+    min-height: 75vh !important;
+    padding-top: 2.2rem !important;
+    padding-bottom: 2.2rem !important;
+    gap: 2.6rem;
 }
 
 section + section {
@@ -3099,6 +3131,13 @@ section + section {
     .Showcase {
         padding-top: 2.4rem !important;
         padding-bottom: 2.4rem !important;
+    }
+
+    .home {
+        min-height: 75vh !important;
+        padding-top: 1.6rem !important;
+        padding-bottom: 1.8rem !important;
+        gap: 1.5rem;
     }
 }
 
@@ -3532,6 +3571,17 @@ body.dark-theme .mechanic-content::after {
     animation: none;
 }
 
+.carousel.enhanced:has(.portrait-video.is-active) {
+    width: min(420px, calc(100% - 10rem));
+    aspect-ratio: 9 / 16;
+}
+
+@media (max-width: 560px) {
+    .carousel.enhanced:has(.portrait-video.is-active) {
+        width: min(72vw, 320px);
+    }
+}
+
 .bar span {
     background-size: 28px 28px;
     animation: stripeSlide 0.9s linear infinite;
@@ -3908,10 +3958,22 @@ body:not(.dark-theme) .published-game-item:nth-child(2n) {
 }
 
 @media (max-width: 560px) {
+    .published-games > p {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.45;
+    }
+
+    .published-games-container {
+        gap: 0.85rem;
+        margin-bottom: 1rem;
+    }
+
     .published-games h1 {
         font-size: 2.35rem;
         padding: 0.5rem 0.8rem;
         box-shadow: 5px 5px 0 var(--primary-color);
+        margin-bottom: 0.9rem;
     }
 
     .published-games h1::before {
@@ -3922,8 +3984,80 @@ body:not(.dark-theme) .published-game-item:nth-child(2n) {
     }
 
     .published-game-item {
-        padding: 1.2rem;
+        min-height: 0;
+        padding: 0.85rem;
+        display: grid;
+        grid-template-columns: 7.2rem minmax(0, 1fr);
+        grid-template-areas:
+            "cover badge"
+            "cover title"
+            "cover tech"
+            "cta cta";
+        column-gap: 0.9rem;
+        row-gap: 0.35rem;
+        box-shadow: 4px 4px 0 var(--ink);
+        transform: none !important;
+    }
+
+    .published-game-item:hover {
+        transform: translate(-2px, -2px) !important;
         box-shadow: 5px 5px 0 var(--ink);
+    }
+
+    .published-game-item::after {
+        display: none;
+    }
+
+    .game-cover-wrap {
+        grid-area: cover;
+        width: 7.2rem;
+        aspect-ratio: 1;
+        margin-bottom: 0;
+        border-width: 2px;
+        box-shadow: 3px 3px 0 var(--ink);
+    }
+
+    .published-game-item h3 {
+        grid-area: title;
+        margin-bottom: 0;
+        font-size: 1.35rem;
+        line-height: 1.05;
+    }
+
+    .game-platform-badge {
+        grid-area: badge;
+        margin-bottom: 0;
+        padding: 0.18rem 0.5rem;
+        font-size: 0.85rem;
+        letter-spacing: 0;
+    }
+
+    .game-tech {
+        grid-area: tech;
+        margin-bottom: 0;
+        padding: 0.2rem 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    .published-game-item ul {
+        display: none;
+    }
+
+    .game-cta {
+        grid-area: cta;
+        margin-top: 0.35rem;
+    }
+
+    .game-cta .btn,
+    .itch-profile-cta .btn {
+        min-height: 3.5rem;
+        padding: 0.65rem 0.85rem;
+        font-size: 1rem;
+        box-shadow: 3px 3px 0 var(--ink);
+    }
+
+    .itch-profile-cta {
+        margin-top: 0.8rem;
     }
 }
 
@@ -3954,4 +4088,203 @@ body:not(.dark-theme) .published-game-item:nth-child(2n) {
 
 .published-game-item:hover .game-cover {
     transform: scale(1.05);
+}
+
+/* Final mobile compact published-game cards */
+@media (max-width: 560px) {
+    .published-games {
+        padding-top: 1.8rem !important;
+        padding-bottom: 1.8rem !important;
+    }
+
+    .published-game-item {
+        min-height: 0;
+        padding: 0.85rem;
+        display: grid;
+        grid-template-columns: 7.2rem minmax(0, 1fr);
+        grid-template-areas:
+            "cover badge"
+            "cover title"
+            "cover tech"
+            "cover cta"
+            "details details";
+        column-gap: 0.9rem;
+        row-gap: 0.35rem;
+        transform: none !important;
+    }
+
+    .game-cover-wrap {
+        grid-area: cover;
+        width: 7.2rem;
+        aspect-ratio: 1;
+        margin-bottom: 0;
+        border-width: 2px;
+        box-shadow: 3px 3px 0 var(--ink);
+    }
+
+    .published-game-item h3 {
+        grid-area: title;
+        margin-bottom: 0;
+        font-size: 1.35rem;
+        line-height: 1.05;
+    }
+
+    .game-platform-badge {
+        grid-area: badge;
+        margin-bottom: 0;
+    }
+
+    .game-tech {
+        grid-area: tech;
+        margin-bottom: 0;
+    }
+
+    .published-game-item ul {
+        grid-area: details;
+        display: block;
+        padding-left: 1.2rem;
+        margin-top: 0.45rem;
+        margin-bottom: 0;
+    }
+
+    .published-game-item ul li {
+        font-size: 0.98rem;
+        line-height: 1.35;
+        margin-bottom: 0.3rem;
+    }
+
+    .game-cta {
+        grid-area: cta;
+        margin-top: 0.15rem;
+        align-self: end;
+    }
+
+    .game-cta .btn {
+        width: fit-content;
+        min-height: 3.1rem;
+        padding: 0.55rem 0.75rem;
+        font-size: 0.9rem;
+        justify-content: flex-start;
+    }
+}
+
+/* Published games: compact media cards on every viewport */
+.published-games-container {
+    grid-template-columns: 1fr;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.published-game-item,
+.published-game-item:nth-child(3n + 1),
+.published-game-item:nth-child(3n + 2) {
+    display: grid;
+    grid-template-columns: 8.4rem minmax(0, 1fr);
+    grid-template-areas:
+        "cover badge"
+        "cover title"
+        "cover cta"
+        "details details";
+    column-gap: 1rem;
+    row-gap: 0.35rem;
+    padding: 1rem;
+    transform: none;
+}
+
+.published-game-item:hover,
+.published-game-item:nth-child(3n + 1):hover,
+.published-game-item:nth-child(3n + 2):hover {
+    transform: translate(-3px, -3px);
+}
+
+.published-game-item::after {
+    display: none;
+}
+
+.game-cover-wrap {
+    grid-area: cover;
+    width: 8.4rem;
+    aspect-ratio: 1;
+    margin-bottom: 0;
+    border-width: 2px;
+    box-shadow: 3px 3px 0 var(--ink);
+}
+
+.game-platform-badge {
+    grid-area: badge;
+    margin-bottom: 0;
+    align-self: start;
+    justify-self: start;
+}
+
+.published-game-item h3 {
+    grid-area: title;
+    margin-bottom: 0;
+}
+
+.game-tech {
+    grid-area: tech;
+    margin-bottom: 0;
+}
+
+.game-cta {
+    grid-area: cta;
+    margin-top: 0.2rem;
+    justify-self: start;
+}
+
+.game-cta .btn {
+    width: fit-content;
+    min-height: 3.4rem;
+    padding: 0.65rem 0.9rem;
+    font-size: 1rem;
+    justify-content: flex-start;
+}
+
+.published-game-item ul {
+    grid-area: details;
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.published-game-item ul li {
+    font-size: 1.05rem;
+    line-height: 1.4;
+    margin-bottom: 0.35rem;
+}
+
+@media (max-width: 560px) {
+    .published-game-item,
+    .published-game-item:nth-child(3n + 1),
+    .published-game-item:nth-child(3n + 2) {
+        grid-template-columns: 6.6rem minmax(0, 1fr);
+        grid-template-areas:
+            "cover badge"
+            "cover title"
+            "cover cta"
+            "details details";
+        column-gap: 0.75rem;
+        padding: 0.8rem;
+    }
+
+    .game-cover-wrap {
+        width: 6.6rem;
+    }
+
+    .published-game-item h3 {
+        font-size: 1.25rem;
+    }
+
+    .published-game-item ul li {
+        font-size: 0.92rem;
+        line-height: 1.32;
+    }
+
+    .game-cta .btn {
+        min-height: 3rem;
+        padding: 0.5rem 0.7rem;
+        font-size: 0.84rem;
+    }
 }
