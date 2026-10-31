@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex">
     <meta name="description" content="Request deletion of Flipfall account data, find Play Games deletion instructions, and contact developer Chitransh.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>Flipfall — Account and Data Deletion | Chitransh</title>
@@ -43,18 +42,29 @@
             <p>Use this page to request deletion of your Flipfall account data or to find instructions for removing Flipfall data from Google Play Games.</p>
         </header>
 
-        <!-- Remove this notice and noindex only after the deletion workflow and retention policy are confirmed. -->
-        <p class="notice"><strong>Policy setup in progress.</strong> The deletion workflow and retention periods for Firebase data and support requests still need to be confirmed. This page is not yet ready for submission as a completed Google Play deletion policy.</p>
+        <p class="notice"><strong>Deletion is permanent.</strong> Removing your game saves removes saved progress, coins and power-ups. Your Google account remains active. You may also request deletion of Analytics data while keeping your game saves.</p>
 
         <section aria-labelledby="request-heading">
             <h2 id="request-heading">Request account and data deletion</h2>
             <ol>
                 <li>Email <a href="mailto:chitranshnishad27@gmail.com">chitranshnishad27@gmail.com</a> with the subject <strong>Flipfall account and data deletion request</strong>.</li>
-                <li>Describe whether you used guest play or Google Play Games cloud saves, and which data you want deleted. Include your Play Games player ID if available. Do not send passwords, authentication codes or payment card details.</li>
-                <li>We will review the request and reply with any ownership verification needed, the data we can identify, and the steps required to complete deletion. A request is not confirmation that deletion has completed.</li>
+                <li>Describe whether you used guest play or Google Play Games cloud saves, and whether you want all associated data deleted or only Analytics data. If you still have the app, open <strong>Settings → Privacy &amp; data deletion → Copy privacy support identifiers</strong> and include those identifiers. In gameplay, use <strong>Menu → Privacy &amp; data deletion</strong>. If the app is uninstalled, you can still submit a request; include any player ID or privacy identifiers you previously saved. We may be unable to locate pseudonymous Analytics records without their app-instance ID. Do not send passwords, authentication codes or payment card details.</li>
+                <li>We review and respond to verified requests within <strong>30 days</strong>. We will explain any ownership verification needed, identify the affected data, and confirm the actions taken or any remaining steps. Provider processing and backup removal may take longer as described below. We cannot delete another person’s data based only on a display name. A request is not confirmation that deletion has completed.</li>
             </ol>
             <a class="button" href="mailto:chitranshnishad27@gmail.com?subject=Flipfall%20account%20and%20data%20deletion%20request&amp;body=Hello%2C%0A%0AI%20would%20like%20to%20request%20deletion%20of%20my%20Flipfall%20account%20data.%0A%0APlay%20mode%20%28Guest%20or%20Play%20Games%29%3A%0APlayer%20ID%20%28if%20available%29%3A%0AData%20I%20want%20deleted%3A%0A">Email a deletion request</a>
-            <p>No mail app? Send the request manually to <strong>chitranshnishad27@gmail.com</strong>. You can contact us without reinstalling Flipfall.</p>
+            <p>No mail app? Send the request manually to <strong>chitranshnishad27@gmail.com</strong>. You can contact us without reinstalling Flipfall. For Google-held game data, the browser instructions below let you authenticate directly with Google; we never need your Google password.</p>
+        </section>
+
+        <section aria-labelledby="app-heading">
+            <h2 id="app-heading">Delete saves inside Flipfall</h2>
+            <ol>
+                <li>From the main menu, open <strong>Settings → Privacy &amp; data deletion</strong>. During a level, open <strong>Menu → Privacy &amp; data deletion</strong>.</li>
+                <li>Select <strong>Delete cloud + device saves</strong> to remove Flipfall saves and conflict backups from the signed-in Play Games profile and this device. Sign in to the correct Play Games profile when prompted. For guest data on this device only, choose <strong>Delete device saves only</strong>.</li>
+                <li>Read the warning, then tap the confirmation button. An internet connection is required for cloud deletion. Close Flipfall on other devices before proceeding.</li>
+                <li>Wait for the completion message. If deletion is interrupted or fails, saving and syncing remain paused and the app offers a retry. Local-only deletion leaves any cloud save intact.</li>
+            </ol>
+            <p>Deletion covers both game modes, local backups and saved generated levels. It disconnects automatic cloud syncing, resets on-device Analytics data and disables Analytics and crash reporting on this installation. It does not instantly erase records already uploaded to Firebase.</p>
+            <p>To request removal of previously uploaded Analytics, choose <strong>Request account / Analytics deletion</strong> and send the prepared email. Opening the email composer does not send the request. You can request Analytics deletion alone without deleting game saves or your Google account.</p>
         </section>
 
         <section aria-labelledby="games-heading">
@@ -73,17 +83,21 @@
             <h2 id="data-heading">Data covered and retention</h2>
             <dl>
                 <dt>Local guest profile and device saves</dt>
-                <dd>Includes saved progress, attempts, coins, power-ups, settings and generated levels stored by the app. On Android, clear Flipfall's app storage in device Settings to remove this device's app data. Device data persists until removed; clearing local storage does not delete a cloud save.</dd>
+                <dd>Includes saved progress, attempts, coins, power-ups, settings and generated levels stored by the app. On Android, clear Flipfall's app storage in device Settings to remove this device's app data. Device saves and their app-managed backups are retained until you delete them. In-app device-save deletion removes them immediately when it completes. Clearing local storage does not delete a cloud save; Android or other device backup services may retain copies under their own policies.</dd>
                 <dt>Google Play Games cloud saves</dt>
-                <dd>Includes the synchronized game profile: progress, coin balance, power-up inventory, settings and Endless resume data. These saves are not configured by Flipfall to expire after 90 days. Use the Play Games instructions above to manage game data, and contact us about any remaining Flipfall data.</dd>
-                <dt>Firebase Analytics and Crashlytics</dt>
-                <dd>Gameplay analytics and crash diagnostics are handled separately from Play Games saves. Their configured retention periods and the process for deleting identifiable records must be confirmed before this policy is finalized. Deleting a Play Games save does not automatically delete these records.</dd>
+                <dd>Includes the synchronized game profile: progress, coin balance, power-up inventory, settings and Endless resume data. Saves and conflict backups remain until deleted; they do not expire automatically after 90 days. The in-app cloud deletion flow removes the primary save and Flipfall conflict backups and checks the current server listing before reporting success. Other devices can retain independent copies; close them and clear their local Flipfall data to prevent an old copy being uploaded again. You may also use Google’s browser flow above.</dd>
+                <dt>Google Analytics for Firebase</dt>
+                <dd>Gameplay events and installation identifiers are separate from cloud saves. For our standard Google Analytics service, detailed user/event data used in Explorations is subject to the property’s retention settings of 2 or 14 months; activity can renew the retention period for a user identifier. Standard aggregated reports are not governed by that retention setting and may remain longer. You can request deletion associated with your Analytics app-instance IDs by email. We submit verified, identifiable requests through Google Analytics’ user-deletion controls and confirm submission; Google completes its own background deletion. Resetting Analytics on the device alone does not delete historical server records. <a href="https://support.google.com/analytics/answer/7667196?hl=en">Google Analytics retention details</a>.</dd>
+                <dt>Firebase Crashlytics</dt>
+                <dd>Crash traces and related installation identifiers are retained by Firebase for 90 days before Google starts removing them from live and backup systems; removal is not guaranteed to finish on day 90. On Android, in-app save deletion disables collection and asks Crashlytics to delete unsent reports. Already uploaded crash diagnostics are subject to Google’s retention process. We do not attach a Play Games player ID, name or email to crash reports. <a href="https://firebase.google.com/support/privacy/">Firebase privacy and retention details</a>.</dd>
+                <dt>On-device Analytics deletion receipt</dt>
+                <dd>A small privacy receipt retains previously captured Analytics app-instance IDs so you can identify historical records in a deletion request after resetting game saves. It contains no coin balances or progress and is not included in cloud saves. An identifier expires after 90 days without capture and is removed the next time the app reads the receipt. Android Clear storage removes it immediately. Identifiers copied to your clipboard or email remain under your control.</dd>
                 <dt>Deletion requests and verification messages</dt>
-                <dd>Requests sent by email contain your contact details and any information you provide. The retention period for these messages must be confirmed before this policy is finalized.</dd>
+                <dd>Deletion emails and necessary ownership-verification correspondence are used to process your request. We keep them for up to 90 days after the request is resolved, then remove them from the support mailbox. The email provider may retain backup or security records under its own policies. If a specific legal obligation requires longer retention, we will explain the reason and applicable period when handling the request.</dd>
                 <dt>Google Play purchases and the Google account</dt>
-                <dd>Deleting Flipfall data does not delete your Google account or Google's purchase records. Google manages its own records under its policies. Deletion is not a refund request.</dd>
+                <dd>Deleting Flipfall data does not delete your Google account or Google's purchase records. Google manages payment and purchase records under its own policies; we do not control their retention period. Our local game save contains processed transaction identifiers used to prevent duplicate grants; those local identifiers are removed with the save. Deletion is not a refund request.</dd>
             </dl>
-            <p><strong>Loss of saved data:</strong> deleting your save may permanently remove progress, coins and power-ups, including balances from consumed coin packs. Existing device copies may upload again if you continue playing and syncing; contact support before resuming if you are completing a deletion request.</p>
+            <p><strong>Loss of saved data:</strong> deleting your save may permanently remove progress, coins and power-ups, including balances from consumed coin packs. Automatic syncing is disabled after in-app deletion on this installation. Explicitly reconnecting another device or an older copy can restore its saved data. Do not reconnect old copies while a deletion request is in progress.</p>
         </section>
 
         <footer>Flipfall · Chitransh · Updated 31 October 2026<br>Contact: <a href="mailto:chitranshnishad27@gmail.com">chitranshnishad27@gmail.com</a></footer>
